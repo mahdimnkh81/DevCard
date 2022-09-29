@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "صفحه اصلی";
+}
+
+<section class="about-me-section p-3 p-lg-5 theme-bg-light">
+    <div class="container">
+        <div class="profile-teaser media flex-column flex-lg-row">
+            <img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" src="assets/images/mahdi.jpeg" alt="">
+            <div class="media-body">
+                <h2 class="name font-weight-bold mb-1">مهدی منصوری خواه</h2>
+                <div class="tagline mb-3">برنامه نویس </div>
+                <div class="bio mb-4">
+                    دانشجو ترم چهار مهندسی کامپیوتر دانشگاه امیرکبیر هستم و با زبان های java, python, C# کار کرده ام ولی تسلط بیشتری در C# و framework
+                    Asp.NetCore دارم.
+                <div class="mb-4">
+                    <a class="btn btn-primary mr-2 mb-3" href="https://github.com/mahdimnkh81?tab=repositories">
+                        <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+                        <span class="d-none d-md-inline">
+                            برو
+                            به
+                        </span> گیت هابم
+                    </a>
+                    <a class="btn btn-secondary mb-3" href="https://github.com/mahdimnkh81?tab=repositories">
+                        <i class="fas fa-file-alt ml-2"></i>
+                        <span class="d-none d-md-inline">مشاهده </span> نمونه کارها
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@* Loading Partial View *@
+
+@*<partial name="Projects" />*@
+@*@await Html.PartialAsync("Projects")*@
+@*@await Html.PartialAsync("Projects", new List<Project>())*@
+
+@* //End Loading Partial View *@
+
+@* Loading View Component *@
+
+@await Component.InvokeAsync("Projects", new {name = "hossein"})
+
+<div class="container">
+    <hr>
+</div>
+
+@await Component.InvokeAsync("LatestArticles")
+
+@* //End Loading View Component *@
