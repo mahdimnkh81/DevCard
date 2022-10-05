@@ -32,6 +32,7 @@ namespace DevCard_MVC
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
             }
             else
             {
